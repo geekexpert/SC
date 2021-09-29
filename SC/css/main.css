@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size:18px;
+    color:#686868;
+    background: #f7f7f7;
+}
+.container {
+    background:#FFF;
+}
+.container-fluid {
+    padding: 0;
+}
+.footer-copyright.text-center
+{
+    background: #fff;
+    padding: 20px;
+}
+/* Header */
+.logo {
+    font-size: 2em;
+}
+.logo span {
+    font-size: 0.9rem;
+    display: block;
+    font-weight: 600;
+}
+.banner-main {
+    height: 500px;
+    width: 100%;
+}
+.navigation {
+    display: flex;
+    min-width: 320px;
+    align-items: center;
+    justify-content: space-around;
+    height: 88px;
+    flex-wrap: nowrap;
+}
+.contact {
+    display: flex;
+    flex-direction: column;
+    height: 88px;
+    justify-content: center;
+}
+h1 {
+    position: absolute;
+    bottom: 60px;
+    right: 22px;
+    color: #fff;
+    max-width: 528px;
+    text-shadow: 2px 3px black;
+}
+h2 {
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 25px 0;
+    max-width: 800px;
+    line-height: 2.1rem;
+}
+h3 {
+    text-align: left;
+    margin-bottom: 20px;
+    color: #616161;
+    font-weight: 400;
+    text-decoration: underline;
+}
+.home-banner {
+    position: relative;
+}
+.left-cnt, .right-cnt {
+ max-width: 460px;
+    text-align: justify;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 0;
+}
+.middle-cnt p {
+    margin-top: 5px;
+}
+.middle-cnt {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.middle-cnt img {
+    max-width:460px;
+}
+.east-content {
+    max-width: 920px;
+    margin: auto;
+    margin-top: 40px;
+    padding-top: 40px;
+    border-top: 2px solid #cccccc;
+}
+/* Calculator */
+.left {
+    max-width: 367px;
+}
+.type-clean {
+    display: flex;
+}
+.type-clean div {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 10px;
+    max-width: 100px;
+    justify-content: start;
+}
+.space-box {
+    display: flex;
+    flex-direction: column;
+}
+.calc-box {
+    margin: 0 10px 0;
+}
+.clean-item {
+    display: flex;
+    margin-bottom: 5px;
+}
+.cal-both {
+    margin: 0 10px;
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+.space-item {
+    min-width: 110px;
+}
+.cal-both span {
+    min-width: 24px;
+    display: inline-block;
+    background: #ef9999;
+    text-align: center;
+    border-radius: 10px;
+    margin-right: 4px;
+}
+span.count-cal {
+    width: 24px;
+    background: tomato;
+    height: 20px;
+    margin-right: 5px;
+}
+input[type="text"], 
+input[type="email"], 
+input[type="number"],
+textarea {
+    background: #debdb7;
+    border: 1px solid;
+}
+input[type="submit"] {
+    border: 1px solid;
+    padding: 5px 20px;
+}
+.navigation div {
+    cursor: pointer;
+    transition: 2s ease;
+}
+.navigation div:hover {
+    border-bottom: 1px solid black;
+    transition: 2s ease;
+}

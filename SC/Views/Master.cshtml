@@ -1,0 +1,72 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage
+@{
+	Layout = null;
+    //string x = Model.LogoInfo;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Superior Cleaners</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href='@Url.Content("~/css/main.css")'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://kit.fontawesome.com/cc4af4247c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <!-- Nav tabs -->
+<div class="ignore-for-now">
+  
+</div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-xs-12 logo">
+                   @Model.Value("logoInfo") Superior Cleaners <span> Wellington Elite Cleaning Service</span>
+                </div>
+                <nav>
+                    <div class="col-md-4 col-xs-12 navigation">
+                        
+                        @{
+    if (Model.HasValue("menu"))
+    {
+        <ul>
+            @foreach (var item in Model.Value<IEnumerable<string>>("menu"))
+            {
+                <div class="nav-item">@item</div>
+            }
+        </ul>
+    }
+}
+
+
+                        <div class="nav-item">Home</div>
+                        <div class="nav-item">About</div>
+                        <div class="nav-item">Services</div>
+                    </div>
+                </nav>
+
+                <div class="col-md-4 col-xs-12 contact">
+                    <div class="phone">Contact: 022-5840331</div>
+                    <div class="email">Email: info@superiorcleaner.co.nz</div>
+                </div>
+            </div>
+        </div>
+        @RenderBody()
+    </div>
+    <footer>
+
+       
+        <div class="footer-copyright text-center col-xs-12">
+            &copy; copyrighted to Superior Cleaners
+        </div>
+
+    </footer>
+    <!-- Footer -->
+    <script src="/scripts/custom.js"></script>
+</body>
+</html>	

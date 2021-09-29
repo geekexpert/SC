@@ -1,0 +1,264 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<Umbraco.Web.PublishedModels.Home>
+@{
+	Layout = "Master.cshtml";
+	string Title = Model.MainTitle;
+	var BannerImg = Model.Value<IPublishedContent>("banner");
+}
+
+
+@* the fun starts here *@
+
+	<div class="container-fluid home-banner">
+		<h1>@Title</h1>
+		<img src="@BannerImg.Url" alt="@BannerImg.Name" class="banner-main" />
+	</div>
+
+<div class="container">
+<div class="row middle-cnt">
+<h2>@Model.MiddleText</h2>
+		<div class="left-cnt col-md-6 col-xs-12">
+		    <img src="@Model.LeftImage.Url" />
+		    <p>@Model.LeftText</p>   
+		</div>
+		<div class="right-cnt col-md-6 col-xs-12">
+		    <img src="@Model.RightImage.Url" />
+		    <p>@Model.RightText</p>  
+		</div>
+</div>
+
+</div>
+<!-- Calculator Starts -->
+<div class="container">
+    <div class="row east-content">
+   <div ng-app="myApp" ng-controller="myCtrl" class="col-md-9 col-xs-12 cal-left">
+	
+        <h3>@Model.CalculatorText</h3>
+
+       <div class="wrap-calc">
+
+            <div class="left">
+                <h3>Type of Clean</h3>
+                <div class="type-clean">
+                    <div><i class="fas fa-home"></i>Weekly Clean</div>
+                    <div><i class="fas fa-home"></i>Fortnightly Clean</div>
+                    <div><i class="fas fa-home"></i>One Off Spring Clean</div>
+                    <div><i class="fas fa-home"></i>New / Final Home Clean</div>
+                    <div><i class="fas fa-home"></i>Optional Extra Only</div>
+                </div>
+                <h3>Spaces</h3>
+                <div class="space-box">
+                        <div class="calc-box">
+                            <div class="clean-item">
+                                <span class="space-item">Bathrooms</span>
+                                <div class="cal-space-box">
+                                    <span class="item-text"></span>
+                                    <div class="cal-both">
+                                        <span class="count-cal"></span>
+                                        <span>-</span>
+                                        <span>+</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="calc-box">
+                            <div class="clean-item">
+                                <span class="space-item">Bedrooms</span>
+                                <div class="cal-space-box">
+                                    <span class="item-text"></span>
+                                    <div class="cal-both">
+                                        <span class="count-cal"></span>
+                                        <span>-</span>
+                                        <span>+</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="calc-box">
+                            <div class="clean-item">
+                                <span class="space-item">Kitchens</span>
+                                <div class="cal-space-box">
+                                    <span class="item-text"></span>
+                                    <div class="cal-both">
+                                        <span class="count-cal"></span>
+                                        <span>-</span>
+                                        <span>+</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="calc-box">
+                            <div class="clean-item">
+                                <span class="space-item">Living Spaces</span>
+                                <div class="cal-space-box">
+                                    <span class="item-text"></span>
+                                    <div class="cal-both">
+                                        <span class="count-cal"></span>
+                                        <span>-</span>
+                                        <span>+</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="calc-box">
+                            <div class="clean-item">
+                                <span class="space-item">Laundry</span>
+                                <div class="cal-space-box">
+                                    <span class="item-text"></span>
+                                    <div class="cal-both">
+                                        <span class="count-cal"></span>
+                                        <span>-</span>
+                                        <span>+</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                <h3>My house is currently</h3>
+                <div class="house-status">
+                    <div class="clean">
+                        <span>Very Clean</span>
+                        <span>Reasonably Clean</span>
+                        <span>Moderately Dirty</span>
+                        <span>Very Dirty</span>
+                    </div>
+                </div>
+                <h4>We recommend 0  hours cleaning for your Future Weekly Cleans</h4>
+                <div class="house-recomendation">
+                    <div class="recommend">
+                        <div class="calc-box">
+                            <div class="clean-item">
+                                <div class="cal-space-box">
+                                    <span class="item-text"></span>
+                                    <div class="cal-both">
+                                        <span class="count-cal"></span>
+                                        <span>-</span>
+                                        <span>+</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h3>Add any Optional Extra Items you would like cleaned</h3>
+                <div class="house-optional">
+                    <div class="clean-item">
+                        <span class="space-item">Bathrooms</span>
+                        <div class="cal-space-box">
+                            <span class="item-text"></span>
+                            <div class="cal-both">
+                                <span class="count-cal"></span>
+                                <span>-</span>
+                                <span>+</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clean-item">
+                        <span class="space-item">Bedrooms</span>
+                        <div class="cal-space-box">
+                            <span class="item-text"></span>
+                            <div class="cal-both">
+                                <span class="count-cal"></span>
+                                <span>-</span>
+                                <span>+</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clean-item">
+                        <span class="space-item">Kitchens</span>
+                        <div class="cal-space-box">
+                            <span class="item-text"></span>
+                            <div class="cal-both">
+                                <span class="count-cal"></span>
+                                <span>-</span>
+                                <span>+</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clean-item">
+                        <span class="space-item">Living Spaces</span>
+                        <div class="cal-space-box">
+                            <span class="item-text"></span>
+                            <div class="cal-both">
+                                <span class="count-cal"></span>
+                                <span>-</span>
+                                <span>+</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clean-item">
+                        <span class="space-item">Laundry</span>
+                        <div class="cal-space-box">
+                            <span class="item-text"></span>
+                            <div class="cal-both">
+                                <span class="count-cal"></span>
+                                <span>-</span>
+                                <span>+</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h3>Add any specific instructions or comments</h3>
+                <div class="comments">
+                    <textarea name="comments" id="" cols="30" rows="10"></textarea>
+                </div>
+               <div class="date-time">
+                   <h3>Select the date (Mon-Fri) and time (9am-3pm) for your First Clean</h3>
+                    <div class="date-wrap">
+                        <div class="date">
+                            <h4>Day</h4>
+                            <input type="text">
+                        </div>
+                        <div class="time">
+                            <input type="radio" name="morning"/>
+                            <input type="radio" name="afternoon"/>
+                        </div>
+                    </div>
+                </div> 
+                <h3>Enter the address of the house to be cleaned</h3>
+                <div class="house-details">
+                    <h4>Address (Street, Suburb, City)</h4>
+                    <div class="street">
+                        <input type="text" name="address">
+                    </div>
+                </div>
+                <h3>Contact Details</h3>
+                <div class="contact">
+                    <h4>Enter your contact details</h4>
+                    <div class="form">
+                        <div class="contact-item">
+                            <div>Name:</div>
+                            <input type="text" name="name">
+                        </div>
+                        <div class="contact-item">
+                            <div>Email:</div>
+                            <input type="email" name="email">
+                        </div>
+                        <div class="contact-item">
+                            <div>Name:</div>
+                            <input type="number" name="phonenumber">
+                        </div>
+                    </div>
+                </div>
+                <div class="agreement">
+                    <input type="radio"> I accept the terms and conditions
+                </div>
+                <input type="submit" value="Submit">
+            </div>
+        </div>
+        </div>
+        <div class="col-md-3 col-xs-12 cal-right"></div>
+        </div>
+    </div>
+   <div class="lower-content">
+ 
+   @foreach (var x in @Model.HomeContent)
+   {
+
+   	<div>@x</div>
+
+}
+   </div>
+
+
+
+<!-- Calculator Ends -->
